@@ -17,11 +17,16 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+
+
+
+
+
+
+
 warnings.filterwarnings('ignore')
 
-import nltk
-from nltk.stem import WordNetLemmatizer
-nltk.download('popular', quiet=True) # for downloading packages
+
 
 # uncomment the following only the first time
 nltk.download('punkt') # first-time use only
@@ -76,7 +81,6 @@ def response(user_response):
 
 
 flag=True
-print("ROBO: My name is Robo. I will answer your queries about Chatbots. If you want to exit, type Bye!")
 while(flag==True):
     user_response = input()
     user_response=user_response.lower()
