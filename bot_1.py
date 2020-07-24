@@ -158,9 +158,22 @@ print("Please enter the url and name for the npc")
 url = input('Enter the URL : ')
 start_flag = 0
 
+start_msg = 'Hi TA lets starts todays class, so can you tell me what do you want to do?'
+command = '00001'
+command_status = '1'
+
+parameters = {
+                  'message':start_msg,
+                  'command_status':command_status,
+                  'command_message':command
+             }
+info = submitInformation(url,parameters);
+if info:
+    info = info.decode("utf-8").strip()
+    print(info)
 
 
-
+'''
 while(1):
     if start_flag == 0:
         start_flag = 1
@@ -193,7 +206,7 @@ while(1):
                 info = submitInformation(url,parameters);
         
         
-        
+'''        
 
 # Keyword Matching
 '''
